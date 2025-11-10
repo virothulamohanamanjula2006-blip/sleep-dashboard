@@ -1,5 +1,8 @@
-streamlit>=1.29
-pandas>=2.2.1
-numpy>=2.0.0
-plotly==5.22.0
+streamlit==1.51.0
+pandas==2.3.3
+numpy==2.3.4
+plotly==5.23.0
 matplotlib==3.9.0
+jinja2
+watchdog
+pyarrow
