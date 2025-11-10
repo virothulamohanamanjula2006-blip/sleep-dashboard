@@ -30,7 +30,7 @@
 # 
 # bash
 # # Clone the repository
-# git clone https://github.com/yourusername/sleep-dashboard.git
+# git clone https://github.com/virothulamohanamanjula2006-blip/sleep-dashboard.git
 # cd sleep-dashboard
 # 
 # # Install dependencies
