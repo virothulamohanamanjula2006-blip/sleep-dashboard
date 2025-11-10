@@ -5,19 +5,18 @@ Deploy to: Streamlit Cloud (free hosting)
 """
 
 import streamlit as st
-import pandas as pd
-import numpy as np
-import plotly.graph_objects as go
-import plotly.express as px
-from datetime import datetime, timedelta
-
-# Page configuration
 st.set_page_config(
     page_title="Sleep Analytics Dashboard",
     page_icon="🌙",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+import pandas as pd
+import numpy as np
+import plotly.graph_objects as go
+import plotly.express as px
+from datetime import datetime, timedelta
 
 # Custom CSS
 st.markdown("""
@@ -179,7 +178,7 @@ with col1:
         height=350,
         hovermode='x unified'
     )
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1, width="stretch")
 
 with col2:
     st.markdown("### 📊 Sleep Quality Score")
@@ -201,7 +200,7 @@ with col2:
         height=350,
         hovermode='x unified'
     )
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width="stretch")
 
 st.markdown("---")
 
@@ -240,7 +239,7 @@ with col1:
         showlegend=False,
         height=300
     )
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width="stretch")
 
 with col2:
     st.markdown("### 📅 Weekly Pattern")
@@ -268,7 +267,7 @@ with col2:
         height=300,
         showlegend=False
     )
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width="stretch")
 
 with col3:
     st.markdown("### ☀ Sleep Schedule")
@@ -300,7 +299,7 @@ with col3:
         height=300,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
-    st.plotly_chart(fig5, use_container_width=True)
+    st.plotly_chart(fig5, width="stretch")
 
 st.markdown("---")
 
@@ -330,7 +329,7 @@ with col2:
 with st.expander("📊 View Raw Data"):
     st.dataframe(
         df.style.background_gradient(cmap='viridis', subset=['quality']),
-        use_container_width=True
+        width="stretch
     )
 
 # Footer
